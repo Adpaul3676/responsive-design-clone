@@ -1,0 +1,311 @@
+.backgroundImages {
+  width: 100vw;
+  height: 100vh;
+  /* background-color: black; */
+}
+.image1 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  box-sizing: content-box;
+  z-index: -2;
+  min-width: 1440px;
+  min-height: 600px;
+}
+
+.opaque {
+  width: 100%;
+  height: 100%;
+  z-index: -1;  
+  background-color:rgba(0, 0, 0, 0.411);
+  position: fixed;
+}
+
+/* End of background setup. Navbar css starts here */
+
+.topBox {
+  width: 100vw;
+  height: 100px;
+  /* background-color: black; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 0;
+}
+
+.topContainer {
+  height: 90px;
+  width: 75%;
+  display: flex;
+  justify-content: space-between;
+  /* background-color: black; */
+}
+
+.titleBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  right: 50px;
+}
+
+.titleText {
+  display: flex;
+  color:rgba(255, 255, 255, 0.5);
+  font-size: 1.3em;
+  z-index: 4;
+}
+
+.navBox {
+  width: 325px; 
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* background-color: black; */
+  position: relative;
+  left: 70px;
+}
+
+/* @font-face {
+  font-family: 'Nunito';
+  src: url();
+} */
+
+.navItem {
+  width: 75px;
+  /* background-color:rgba(255, 255, 255, 0.5); */
+}
+
+.textOpacity {
+  color:rgba(255, 255, 255, 0.5) !important;
+  background: transparent;
+  border: none !important;
+  font-size: 1.1em;
+}
+
+.textOpacity:hover {
+  color:rgba(255, 255, 255, 0.8) !important;
+}
+
+.aboutBox {
+  position: relative;
+  left: 7px;
+}
+
+.menuBox {
+  display: none;
+  width: 100px;
+  height: 50px;
+  border: solid 2px #64a19d;
+  color: #64a19d;
+  background: transparent;
+  border-radius: 5px;
+}
+
+/* End of the Navbox and beginning of the main text area */
+
+.mainBox1 {
+  width: 100vw;
+  height: 430px;
+  /* background-color: blanchedalmond; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  top: 40px;
+}
+
+.textBox1 {
+  width: 60%;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background-color: blanchedalmond; */
+}
+
+.grayscaleText {
+  font-size: 6em;
+  background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0));
+  letter-spacing: 0.8rem;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  /* background-color: rgb(124, 211, 204); */
+}
+
+.textBox2 {
+  width: 60%;
+  height: 60px;
+  /* background-color: blanchedalmond; */
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.subText {
+  color:rgba(255, 255, 255, 0.5) !important;
+  background: transparent;
+  border: none !important;
+  font-size: 1.5em;
+  display: flex;
+  flex-wrap: wrap;
+  width: 55%;
+  /* justify-content: center; */
+  text-align: center;
+  position: relative;
+  bottom: 10px;
+}
+
+.startButton {
+  position: relative;
+  top: 20px;
+  width: 175px;
+  height: 65px;
+  background-color: #64a19d;
+  border: none;
+  border-radius: 5px;
+  color: #fff; 
+}
+
+.startButton:hover {
+  background-color:  #578a86;;
+}
+
+/* LET THE MADNESS BEGIN */
+
+@media (max-width: 1150px) {
+  .subText {
+    width: 80%;
+  }
+}
+
+@media (max-width: 990px) {
+
+  .navItem {
+    display: none;
+  }
+
+  .textOpactiy{
+    display: none;
+  }
+
+  .topBox {
+    background-color: #fff;
+  }
+
+  .titleText {
+    color: rgb(0, 0, 0);
+    flex-wrap: nowrap;
+    width: 130px;
+  }
+
+  .grayscaleText {
+    font-size: 3.2em;
+  }
+
+  .subText {
+    font-size: 1.2em;
+  }
+  
+  .topContainer {
+    justify-content: space-around;
+    width: 90%;
+  }
+
+  .navBox {
+    justify-content: flex-end;
+    /* position: relative; */
+  }
+
+  .menuBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+}
+
+@media (max-width: 750px) {
+  .topContainer {
+    width: 60%;
+  }
+}
+
+@media (max-width: 625px) {
+  .subText {
+    font-size: 1.2em;
+    width: 100%;
+  }
+}
+
+.dropDown {
+  display: flex;
+  flex-direction: column;
+  animation-name: expand;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes expand {
+  0%{
+    height: 90px;
+  }
+
+  100%{
+    height: 200px;
+  }
+}
+
+.reverse {
+  animation-name: shrink;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes shrink {
+  0%{
+    height: 200px;
+  }
+
+  100%{
+    height: 90px;
+  }
+}
+
+.dropTopContainer {
+  box-sizing: content-box;
+  width: 80%;
+  height: 110px;
+  /* background-color: rosybrown; */
+  display: flex;
+  align-items: center;
+}
+
+.dropNavBox {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+
+.menuText {
+  border: none;
+  background: transparent;
+  /* width: 100px; */
+  height: 30px;
+  position: relative;
+  /* left: 40px; */
+  bottom: 15px;
+  font-size: 1em;
+  /* font-weight: 200; */
+  color: grey ;
+}
